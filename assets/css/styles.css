@@ -16,6 +16,13 @@ body {
 a {
   text-decoration: none;
 }
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
 .container {
   width: 1170px;
   max-width: calc(100% - 48px);
@@ -24,7 +31,7 @@ a {
 .btn {
   --height: 60px;
   display: inline-block;
-  min-width: 205px;
+  width: 205px;
   height: var(--height);
   padding: 0 20px;
   border-radius: 99px;
@@ -90,6 +97,7 @@ a {
   line-height: 1.6em;
 }
 .logo__brand {
+  font-family: "Sora", sans-serif;
   display: block;
   font-size: 1.8em;
   font-weight: 400;
@@ -405,7 +413,10 @@ a {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
 }
-
+.member__control {
+  margin-top: 38px;
+  justify-content: center;
+}
 .member-item__img-bg {
   padding-top: 28px;
   background: #eaf6ff;
@@ -420,7 +431,6 @@ a {
   transition: 0.25s ease-in-out;
 }
 .member-item:hover .member-item__thumb {
-
   transform: scale(1.1);
 }
 .member-item__name {
@@ -439,13 +449,11 @@ a {
   color: #575f66;
 }
 
-.member__control {
-  margin-top: 38px;
+.control {
   display: flex;
-  justify-content: center;
   column-gap: 18px;
 }
-.member__control--btn {
+.control__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -460,12 +468,287 @@ a {
   cursor: pointer;
 }
 
-.member__control--btn:hover {
+.control__btn:hover {
   color: #fff;
   border-color: #2e80ce;
   background: #2e80ce;
 }
 
-.member__control--next--icon {
+.control--next--icon {
   transform: rotate(180deg);
+}
+
+/* Install */
+.install {
+  margin-top: 180px;
+}
+.install__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 70px;
+  border-radius: 4px;
+  background: #2e80ce;
+}
+.install__img {
+  margin-top: -95px;
+  width: 284px;
+  height: 522px;
+  object-fit: cover;
+  display: block;
+}
+.install__content {
+  max-width: 586px;
+}
+.install__content--heading {
+  max-width: 489px;
+}
+
+.install__content--heading,
+.install__content--desc {
+  color: #fff;
+}
+.install__row {
+  display: flex;
+  margin-top: 38px;
+  column-gap: 28px;
+}
+
+/* New */
+.new {
+  margin-top: 85px;
+  padding-top: 85px;
+}
+.new__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.new__content {
+  flex-shrink: 0;
+}
+.new__heading {
+  max-width: 470px;
+}
+.new__more {
+  display: inline-block;
+  margin-top: 28px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.56;
+  text-decoration-line: underline;
+  text-underline-offset: 6px; /*căn dưới gạch chân*/
+  color: #10375c;
+}
+.new__control {
+  margin-top: 28px;
+}
+.new__list {
+  max-width: 570px;
+  display: flex;
+  column-gap: 30px;
+}
+.new-item {
+  flex: 1;
+  border: 1px solid #e8ebee;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.new-item:hover .new-item__img {
+  transform: scale(1.1);
+}
+.new-item__thumb {
+  height: 172px;
+  overflow: hidden;
+}
+.new-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.2s all ease-in-out;
+}
+.new-item__body {
+  background: #ffffff;
+  border: 1px solid #e8ebee;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 24px 24px 16px;
+  transition: 0.25s ease-in;
+}
+.new-item__heading {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.62;
+  color: #10375c;
+}
+.new-item__desc {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.71;
+  color: #575f66;
+}
+.new-item__more {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 1.8;
+  color: #10375c;
+}
+.new-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 18px 50px rgba(0, 0, 0, 0.05);
+}
+.new-item:hover .new-item__body {
+  border-color: #fff;
+}
+.new-item .new-item__more:hover {
+  color: #2e80ce;
+}
+
+/* Appointment */
+.appointment {
+  margin: 170px 0px;
+}
+.appointment__content {
+  background: #f7fbff;
+  text-align: center;
+  padding: 100px 178px;
+}
+.appointment__heading {
+  text-align: center;
+  position: relative;
+  padding-bottom: 18px;
+}
+.appointment__heading::after {
+  content: "";
+  display: inline-flex;
+  justify-content: space-between;
+  width: 136px;
+  height: 2px;
+  background: #2e80ce;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.appointment__desc {
+  max-width: 617px;
+  text-align: center;
+  margin-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.6rem;
+}
+.appointment__more {
+  margin-top: 38px;
+}
+
+/* Footer */
+.footer {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 100px ;
+  background: #10375c;
+  margin-top: 170px;
+}
+
+.footer__row {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+.footer__desc {
+  margin-top: 21px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #a9b3bb;
+}
+.footer__heading {
+  margin-bottom: 28px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #ffffff;
+}
+.footer__item {
+  margin-bottom: 10px;
+}
+.footer__link {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #a9b3bb;
+  white-space: nowrap;
+}
+.footer__link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer__social {
+  display: flex;
+  column-gap: 10px;
+}
+.footer__social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-bottom: 28px;
+}
+.footer__social-icon {
+  color: #2e80ce;
+}
+.footer__social-btn:hover {
+  background-color: #2e80ce;
+}
+.footer__social-btn:hover .footer__social-icon {
+  color: #fff;
+}
+.footer__form {
+  display: flex;
+  margin-top: 10px;
+  column-gap: 12px;
+}
+.footer-form__input {
+  width: 212px;
+  height: 46px;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  border: 1px solid #406181;
+  border-radius: 4px;
+  color: #a9b3bb;
+}
+.footer-form__input::placeholder {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #9ca8b1;
+}
+.footer-form__submit {
+  --height: 46px;
+
+  width: 108px;
+  background: #2e80ce;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.footer__copyright {
+  border-top: 1px solid #406181;
+  padding: 28px 0 42px;
+}
+.footer__copyright-text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  text-align: center;
+  color: #aab3ba;
 }
